@@ -10,7 +10,6 @@ public class MinStack {
     public void push(int x) {
         top1++;
         arr[top1]=x;
-
     }
         
     public void pop() {
@@ -34,13 +33,14 @@ public class MinStack {
 
     public static void main(String args[]){
         MinStack minStack = new MinStack();
-        minStack.push(-2);
-        minStack.push(0);
-        minStack.push(-3);
-        System.out.println(minStack.getMin()); // return -3
+        minStack.push(2);
+        minStack.push(3);
+        minStack.push(4);
+        System.out.println(minStack.getMin()); // return 2
+        minStack.push(1);
+        System.out.println(minStack.getMin()); // return 1
         minStack.pop();
-        System.out.println(minStack.top()); // return 0
-        System.out.println(minStack.getMin()); // return -2
+        System.out.println(minStack.getMin()); // return 2
     }
 
 }
